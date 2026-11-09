@@ -5,5 +5,7 @@ export const getUsers = async () => {
 }
 
 export const getUsersById = async (userId) => {
-
+const res = await fetch(`http://localhost:5000/users/${userId}`)
+const user = res.json();
+return user;
 }
